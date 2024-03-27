@@ -661,7 +661,7 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #000000;
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -685,8 +685,8 @@ body {
 }
 
 .account-box .btn:hover {
-  background: #03e9f4;
-  color: #fff;
+  background: #03a8f4;
+  color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 5px #03e9f4,
     0 0 25px #03e9f4,
@@ -702,7 +702,7 @@ body {
 
 .account {
   text-decoration: none;
-  color: #ffff;
+  color: #0562ec;
 }
 
 .account:hover {
