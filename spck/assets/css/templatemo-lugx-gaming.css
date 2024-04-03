@@ -1053,7 +1053,7 @@ CTA Style
 }
 
 .cta .subscribe form button {
-  display: inline-block;
+  display: flex;
   height: 50px;
   line-height: 50px;
   background-color: #ee626b;
@@ -1087,29 +1087,19 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/footer-bg.jpg);
-  min-height: 150px;
+  min-height: 200px;
   border-radius: 150px 150px 0px 0px;
 }
-
-footer p {
-  text-align: center;
-  line-height: 90px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+footer ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
 }
-
-footer p a {
-  color: #fff;
-  transition: all .3s;
-  position: relative;
-  z-index: 3;
+ul li a{
+  color: #000;
+  display: grid;
+  grid-template-columns: auto;
 }
-
-footer p a:hover {
-  opacity: 0.75;
-}
-
 
 /* 
 ---------------------------------------------
