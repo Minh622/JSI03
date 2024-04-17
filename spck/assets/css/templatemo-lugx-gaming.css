@@ -1089,17 +1089,19 @@ footer {
   background-image: url(../images/footer-bg.jpg);
   min-height: 200px;
   border-radius: 150px 150px 0px 0px;
-}
-footer ul li {
+  padding: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;  
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;  
 }
 ul li a{
   color: #000;
-  display: grid;
-  grid-template-columns: auto;
 }
+.footer-contact p{
+  color: #000;  
+}
+
 
 /* 
 ---------------------------------------------
