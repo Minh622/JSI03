@@ -8,7 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <title>Phone accessories Website</title>
 
     <!-- Bootstrap core CSS -->
@@ -81,7 +80,7 @@
               id="email"
               type="text"
               name=""
-              pattern="[^ @]*@[^ @]*"
+              pattern=""
               required=""
               placeholder="Email"
             />
@@ -90,7 +89,7 @@
             <input
               id="password"
               type="password"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              pattern=""
               name=""
               required=""
               placeholder="Password"
@@ -98,12 +97,61 @@
           </div>
           <div class="selector">
             <a class="account" href="./Signin.html">Already have an account?</a>
-            <button type="submit" class="btn">
-              <a href="./index.html">Submit</a>
+            <button type="submit" class="btn" id="submit">
+              <a href="./index.html" id="submit">Submit</a>
             </button>
           </div>
         </form>
       </div>
     </header>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyC5XwAKgvYObzKf-jlCAsCuoLtsId_R_2Q",
+        authDomain: "account-4c43b.firebaseapp.com",
+        projectId: "account-4c43b",
+        storageBucket: "account-4c43b.appspot.com",
+        messagingSenderId: "125186704983",
+        appId: "1:125186704983:web:2af1f0d41e71f4b42f4512",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      import {
+        getDatabase,
+        ref,
+        child,
+        get,
+        set,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+
+      const db = getDatabase();
+
+      let email = document.getElementById("email");
+
+      let submit = document.getElementById("submit");
+
+      function AddData() {
+        set(ref(db, "User"), {
+          email: email.value,
+        })
+          .then(() => {
+            alert("Data Added Succesfully");
+          })
+          .catch(() => {
+            alert("Unsuccessful");
+            console.log(error);
+          });
+      }
+    </script>
   </body>
 </html>
